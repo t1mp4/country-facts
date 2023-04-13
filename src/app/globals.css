@@ -8,14 +8,16 @@
 
     --clr-bg-primary: #f2f2f2;
     --clr-bg-secondary: #ffffff;
-
-    @apply bg-bg-primary font-sans font-normal text-text-primary;
   }
 
-  :root:has(#dark-mode-input:checked) {
+  :root[data-theme='dark'] {
     --clr-text-primary: #ffffff;
 
     --clr-bg-primary: #202c36;
     --clr-bg-secondary: #2b3844;
+  }
+
+  #app-root {
+    @apply bg-bg-primary font-sans font-normal text-text-primary;
   }
 }
