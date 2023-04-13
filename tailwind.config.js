@@ -2,6 +2,9 @@
 module.exports = {
   content: ['./src/app/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    screens: {
+      lg: '1000px',
+    },
     fontFamily: {
       sans: 'var(--ff-nunito-sans)', // Defined in root layout
     },
