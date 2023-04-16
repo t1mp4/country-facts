@@ -1,9 +1,9 @@
-import { Nunito_Sans } from 'next/font/google';
+import { Nunito_Sans as NunitoSans } from 'next/font/google';
 import Link from 'next/link';
 import ThemeInput from './components/ThemeInput';
 import './globals.css';
 
-const nunitoSans = Nunito_Sans({
+const nunitoSans = NunitoSans({
   weight: ['300', '400', '600', '800'],
   subsets: ['latin'],
   variable: '--ff-nunito-sans',
@@ -27,6 +27,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             __html: `const storedTheme=localStorage.getItem('theme');'dark'===storedTheme&&document.documentElement.setAttribute('data-theme','dark');`,
           }}
         />
+
         <div id="app-root" className="min-h-full">
           <header className="bg-bg-secondary">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-6">
@@ -45,7 +46,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
                   aria-hidden
                 >
                   <svg
-                    className="w-4"
+                    width="16"
+                    height="16"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
